@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const RIOT_API_KEY = import.meta.env.VITE_RIOT_API_KEY;
+const VITE_ENV_VAR = import.meta.env.VITE_ENV_VAR;
 
 /**
  * Axios 기반의 서버와 통신하는 모듈입니다.
@@ -25,7 +25,7 @@ const axiosInstance = axios.create({
  * @returns {string} - 토큰
  */
 const getAuthorization = () => {
-  return { 'X-Riot-Token': RIOT_API_KEY };
+  return { 'X-Riot-Token': VITE_ENV_VAR };
 };
 
 /**
