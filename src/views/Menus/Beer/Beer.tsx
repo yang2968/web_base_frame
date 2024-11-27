@@ -3,6 +3,13 @@ import api from '@/apis';
 import BeerType from '@/types/beer.type';
 
 import CircularProgress from '@mui/material/CircularProgress';
+/**
+ * Beer API 테스트 페이지입니다.
+ *
+ * @author heewoong
+ * @since 2024-11-27
+
+ */
 
 const Beer: React.FC = () => {
   const [beers, setBeers] = useState<BeerType[]>([]);
