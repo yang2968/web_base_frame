@@ -16,9 +16,9 @@ export default defineConfig({
   server: {
     port: 9999,
     proxy: {
-      '/api/test': {
-        target: 'https://asia.api.riotgames.com',
-        rewrite: (path) => path.replace(/^\/api/, ''),
+      '/api/sample': {
+        target: 'https://api.sampleapis.com',
+        rewrite: (path) => path.replace(/^\/api\/sample/, ''),
         changeOrigin: true,
       },
     },

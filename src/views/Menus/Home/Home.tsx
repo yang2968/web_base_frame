@@ -5,7 +5,11 @@ const Home: React.FC = () => {
     // console.log('Test');
   }, []);
 
-  return <div>Home</div>;
+  return (
+    <div>
+      <div>{'Home'}</div>
+    </div>
+  );
 };
 
 export default Home;

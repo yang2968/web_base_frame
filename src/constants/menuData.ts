@@ -4,8 +4,8 @@ const menuData = [
     path: '/',
   },
   {
-    name: '메뉴1',
-    path: '/menu1',
+    name: 'Beer',
+    path: '/beer',
   },
   {
     name: '메뉴2',

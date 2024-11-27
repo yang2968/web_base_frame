@@ -1,8 +1,12 @@
 import rest from './rest';
 
-// 최근 패치 버전을 가져오는 API
-async function getCurrentPatchVersion(): Promise<number[]> {
-  const response = await rest.get(`/data-dragon/api/versions.json`);
+/**
+ * https://sampleapis.com/api-list/beers
+ */
+async function getBeers(): Promise<any[]> {
+  const response = await rest.get('/api/sample/beers/ale');
+  console.log(response);
+
   if (response.status === 200) {
     return response.data;
   }
@@ -10,7 +14,7 @@ async function getCurrentPatchVersion(): Promise<number[]> {
 }
 
 const sampleService = {
-  getCurrentPatchVersion,
+  getBeers,
 };
 
 export default sampleService;

@@ -17,15 +17,19 @@ const Menu: React.FC<MenuProps> = ({ selectedMenu, onSelect }) => {
   return (
     <nav className='menu-container'>
       <div className='menu-item-container'>
-        {menuData.map((menu) => (
-          <NavLink
-            key={menu.name}
-            className={() => getMenuStyle(menu.name)}
-            onClick={() => onSelect(menu)}
-            to={menu.path}>
-            {menu.name}
-          </NavLink>
-        ))}
+        <div className='menu-item-view'>
+          {menuData.map((menu) => (
+            <NavLink
+              key={menu.name}
+              className={() => getMenuStyle(menu.name)}
+              onClick={() => onSelect(menu)}
+              to={menu.path}>
+              {menu.name}
+            </NavLink>
+          ))}
+        </div>
+
+        <div>1</div>
       </div>
     </nav>
   );
